@@ -91,7 +91,7 @@ p ~ p {
 }
 
 .hero-banner {
-  @apply relative grid min-h-[85vh]  bg-[url('/public/assets/img/banner-home.webp')] bg-cover bg-center before:absolute before:inset-0 before:bg-primary before:opacity-70 isolate px-6 py-10;
+  @apply relative grid min-h-[85vh]  bg-[url('/public/assets/img/banner-home.jpg')] bg-cover bg-top before:absolute before:inset-0 before:bg-primary before:opacity-70 isolate px-6 py-10;
 }
 
 .hero-banner__content {
@@ -200,7 +200,7 @@ p ~ p {
 
 .custom-shape-divider-bottom-1748869204 .shape-fill {
   /*fill: #F5F5F5;*/
-  fill: #d4d4d4;
+  fill: #f0fdf4;
 }
 
 .custom-shape-divider-bottom-1748869302 {
