@@ -5,6 +5,7 @@
   --brand-primary-light: #56b5cc;
   --brand-secondary: #E4D59B;
   --brand-neutral: #cacaca;
+  --brand-highlight: #55d6f5;
   --outer-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
 }
 
@@ -16,6 +17,7 @@
   --color-primary: var(--brand-primary);
   --color-secondary: var(--brand-secondary);
   --outer-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+  --color-highlight: var(--brand-highlight);
 }
 
 @layer base {
@@ -91,7 +93,7 @@ p ~ p {
 }
 
 .hero-banner {
-  @apply relative grid min-h-[85vh]  bg-[url('/public/assets/img/banner-home.jpg')] bg-cover bg-top before:absolute before:inset-0 before:bg-primary before:opacity-70 isolate px-6 py-10;
+  @apply relative grid min-h-[85vh]  bg-[url('/public/assets/img/banner-home.jpg')] bg-cover bg-center before:absolute before:inset-0 before:bg-primary before:opacity-75 isolate px-6 py-10;
 }
 
 .hero-banner__content {
