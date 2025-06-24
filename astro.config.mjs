@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://eufabionovais.github.io/',
-  base: process.env.NODE_ENV === "production" ? '/janus-site-institucional' : '/',
+  base: process.env.NODE_ENV === "production" ? '/athena-site-institucional' : '/',
   output: 'static',
   compressHTML: false,   
   build: {
