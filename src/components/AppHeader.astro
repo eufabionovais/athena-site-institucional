@@ -1,0 +1,35 @@
+---
+import { baseURL } from "../config"
+---
+
+<header class="content-line main-header">
+  <div class="content-line-container px-2.5 px-2.5">
+      <a href=`${baseURL}/` class="logo__link">
+        <img src=`${baseURL}/assets/img/logo-athena.png` alt="Plataforma Athena" class="max-w-40 main-header__logo">
+      </a>
+      <nav>
+        <ul class="flex items-center gap-3">
+          <li>
+            <a href="#sobre" class="main-menu__item">Sobre</a>
+          </li>
+          <li>
+            <a href="#servicos" class="main-menu__item">A Plataforma</a>
+          </li>          
+          <li>
+            <a href="#workshops" class="main-menu__item">Nossos clientes</a>
+          </li>                            
+          <li>
+            <a href="#contato" class="main-menu__item">Contato</a>
+          </li>   
+          <li>
+            <a href="https://plataformaathena.com.br/auth/login" target="_blank" rel="noopener noreferer" class="main-menu__item no-anchor">Acesso</a>
+          </li>                              
+        </ul>
+      </nav>
+      <button class="btn-menu">
+        <span class="bar bar-top"></span>
+        <span class="bar bar-middle"></span>
+        <span class="bar bar-bottom"></span>
+      </button>      
+  </div>
+</header>

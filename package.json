@@ -1,0 +1,27 @@
+{
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "gh": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.7",
+    "accessible-astro-components": "^4.1.1",
+    "astro": "^5.7.13",
+    "astro-seo": "^0.8.4",
+    "crypto-js": "^4.2.0",
+    "tailwind": "^2.3.1",
+    "tailwindcss": "^4.1.7",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.3.0",
+    "sass-embedded": "^1.89.0"
+  }
+}

@@ -1,0 +1,97 @@
+---
+const {classList, theme = "regular", formWorkshop, formId, ...props} = Astro.props;
+
+
+let formOptions = [
+  {
+    value: "assessoria-sucupira",
+    text: "Assessoria Plataforma Sucupira",
+    showInWorkshopForm: false
+  },
+  {
+    value: "assessoria-lattes",
+    text: "Assessoria Currículo Lattes",
+    showInWorkshopForm: false
+  },
+  {
+    value: "apcn",
+    text: "Proposta de Cursos Novos - APCN",
+    showInWorkshopForm: false
+  },
+  {
+    value: "workshop-sucupira",
+    text: "Workshop Plataforma Sucupira",
+    showInWorkshopForm: true
+  },
+  {
+    value: "workshop-lattes",
+    text: "Workshop Currículo Lattes",
+    showInWorkshopForm: true
+  },        
+]
+
+
+---
+
+<form  class="grid md:grid-cols-2 gap-x-5 gap-y-3" data-form-client-validation="true" novalidate="novalidate" id=`${formId}-formContato`  class:list={classList} data-theme={theme} {...props} data-teste="uuid()">
+  <div class="form-group  md:col-span-2">
+  <label for=`${formId}-nome`>Nome completo</label>
+    <input type="text" id=`${formId}-nome` name="nome">
+  </div>
+  <div class="form-group">
+  <label for=`${formId}-email`>E-mail institucional</label>
+  <input type="text" id=`${formId}-email`  name="email">
+  </div>			
+  <div class="form-group">
+  <label for=`${formId}-telefone`>WhatsApp</label>
+  <input type="text" id=`${formId}-telefone`  name="telefone" data-mask-phone-with-ddd="true">
+  </div>		
+  <!-- <div class="form-group">
+  <label for=`${formId}-ies`>Instituição (IES)</label>
+  <input type="text" id=`${formId}-ies`  name="ies">
+  </div>
+  <div class="form-group md:col-span-2">
+  <label for=`${formId}-programa`>Programa</label>
+  <input type="text" id=`${formId}-programa`  name="programa">
+  </div>	 -->
+  <div class="form-group md:col-span-2">
+
+  <label for=`${formId}-assunto`>Assunto</label>
+  <select name="assunto" id=`${formId}-assunto`  class="form-control" data-campo-assunto="true">
+      <option value="" disabled selected>Selecione o assunto</option>
+      {
+      formOptions.map((option) => {
+          if(formWorkshop) {
+            if(option.showInWorkshopForm)  {
+              return (<option value={option.value}>{option.text}</option>)
+            }
+          } else {
+            return (<option value={option.value}>{option.text}</option>);
+          }    
+        })
+      }
+    </select>
+  </div>	  
+  
+  <div class="form-group md:col-span-2" data-numero-participantes="true" hidden={!formWorkshop}>
+  <label for=`${formId}-numeroParticipantes`>Número de Participantes</label>
+  <input type="text" id=`${formId}-numeroParticipantes`  name="numeroParticipantes" data-mask-3-digits>
+  </div>        
+  
+  <div class="form-group md:col-span-2">
+  <label for=`${formId}-mensagem`>Mensagem</label>
+  <textarea name="mensagem" id=`${formId}-mensagem` ></textarea>
+  </div>	
+  
+  <div class="form-group md:col-span-2">
+    <button type="submit">Agendar demonstração</button>
+  </div>
+
+</form>
+
+<script>
+
+
+
+</script>
+

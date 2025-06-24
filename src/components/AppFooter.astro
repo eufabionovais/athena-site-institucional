@@ -1,0 +1,74 @@
+---
+import FormContato from "./FormContato.astro";
+---
+
+<section class="content-line bg-neutral-100 relative secao" id="contato">
+  <div class="content-line-container py-20">
+    <h3 class="uppercase text-3xl text-primary font-bold mb-3 max-w-6xl mx-auto ">Fale com a equipe Athena</h3>
+    <div class="lg:grid lg:grid-cols-2 max-w-6xl mx-auto gap-20">
+      <div>
+  
+          <p>
+            Ficou com alguma dúvida? Entre em contato com nossa equipe agora mesmo e agenda uma demonstração. </p>
+
+          <dl class="mt-10 mb-10 lg:mb-0 grid gap-y-4 space-y-2">
+            <div>
+                <dt class="text-primary flex items-center gap-2 font-bold mb-1">
+                    <span class="material-symbols-outlined text-[#4FA964]">location_on</span> 
+                    Endereço:
+                <dt>
+                <dd class="pl-8">Quadra 15 MR 01, Nº 24 Setor Norte - Planaltina - GO<br>CEP: 73751-285</dd>
+              </dt>
+            </div>
+
+            <div>
+              <dt class="text-primary flex items-center gap-2 font-bold mb-1">
+                  <span class="material-symbols-outlined text-[#4FA964]">
+                  stream_apps
+                  </span>
+                  Telefone / WhatsApp:
+              </dt>
+              <dd class="pl-8"><a class="hover:text-blue-800 duration-200" href="" data-link-telefone></a></dd>
+            </div>						
+            <div>
+              <dt class="text-primary flex items-center gap-2 font-bold mb-1">
+                <span class="material-symbols-outlined text-[#4FA964]">
+                  mail
+                  </span>
+                E-mail:
+              </dt>
+              <dd class="pl-8"><a class="hover:text-blue-800 duration-200" href="" target="_blank" rel="noopener noreferer" data-link-email></a></dd>
+            </div>											
+    
+          </dl>
+
+      </div>
+
+      <FormContato formId="form-contato" />
+
+
+    </div>
+  </div>
+
+</section>
+
+
+<footer class="bg-primary content-line">
+  <div class="content-line-container lg:flex items-center text-white text-sm py-2 justify-between">
+    <div class="lg:flex items-center gap-3 text-center lg:text-left">
+      <a href="/politica-de-privacidade" class="hover:underline">Política de Privacidade</a>
+      <span>|</span>
+      <a href="/termos-de-uso" class="hover:underline">Termos de Uso</a>
+    </div>
+    <address class="text-center lg:text-left">
+      Plataforma Athena é desenvolvida por Janus Educare | <span id="anoAtual"></span>
+    </address>
+  </div>
+</footer>
+
+<style>
+  address {
+    font-style: normal;
+  }
+</style>
+

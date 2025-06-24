@@ -1,0 +1,348 @@
+---
+import { SEO } from "astro-seo";
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import { baseURL } from "../config";
+
+const clientes = [
+	{
+		"nome": "Cesmac - Faculdades do Certão",
+		"logo": "cesmac.jpg",
+	},
+	{
+		"nome": "Centro Universitário do Estado do Pará",
+		"logo": "cesupa.jpg",
+	},
+	{
+		"nome": "Fundação Dom Cabral",
+		"logo": "fdc.jpg",
+	},
+	{
+		"nome": "Instituto Brasileiro de Direito Tributário - IBDT",
+		"logo": "ibdt.jpg",
+	},
+	{
+		"nome": "Instituto de Pesquisa Econômica Aplicada - IPEA",
+		"logo": "ipea.jpg",
+	},
+	{
+		"nome": "Instituto de Tecnologia Aeronáutica - ITA",
+		"logo": "ita.jpg",
+	},
+	{
+		"nome": "Universidade Nove de Julho - Uninove",
+		"logo": "uninove.jpg",
+	},
+	{
+		"nome": "Unisanta",
+		"logo": "unisanta.jpg",
+	},
+	{
+		"nome": "PUC São Paulo",
+		"logo": "puc-sp.png",
+	},
+	{
+		"nome": "Centro Universitário Alves Faria",
+		"logo": "unialfa.jpg",
+	},
+	{
+		"nome": "Universidade Católica de Pernambuco",
+		"logo": "unicap.jpg",
+	},
+	{
+		"nome": "Centro Universitário Unifacvest",
+		"logo": "unifacvest.jpg",
+	},
+	{
+		"nome": "Universidade Rio Verde",
+		"logo": "unirv.jpg",
+	},
+	{
+		"nome": "Universidade Católica de Santos",
+		"logo": "unisantos.jpg",
+	},
+	{
+		"nome": "Univel Centro Universitário",
+		"logo": "univel.jpg",
+	},
+	{
+		"nome": "universidade Prebiteriana Makenzie",
+		"logo": "upm-makenzie.jpg",
+	},
+	{
+		"nome": "Universidade São judas",
+		"logo": "usjt.jpg",
+	},					
+]
+
+const clientesProgramas = [
+	{
+		"nome": "Fundação Dom Cabral",
+		"logo": "fdc.jpg",
+		"programas": ["Gestão contemporânea das organizações"]
+	},	
+	{
+		"nome": "Faculdade de Direito de Franca",
+		"logo": "fdf.jpg",
+		"programas": ["Políticas públicas de desenvolvimento e efetividade do direito"]
+	},	
+	{
+		"nome": "Instituto Agronômico",
+		"logo": "iac.jpg",
+		"programas": ["Agricultura tropical e subtropical"]
+	},	
+	{
+		"nome": "IPEA",
+		"logo": "ipea.jpg",
+		"programas": ["Políticas públicas e desenvolvimento"]
+	},	
+	{
+		"nome": "PUC-Rio",
+		"logo": "puc-rio.jpg",
+		"programas": ["Educação", "Direito"]
+	},	
+	{
+		"nome": "UEL - Universidade Estadual de Londrina",
+		"logo": "uel.jpg",
+		"programas": ["Enfermagem"]
+	},	
+	{
+		"nome": "UERJ - Universidade Estadual do Rio de Janeiro",
+		"logo": "uerj.jpg",
+		"programas": ["Direito"]
+	},	
+	{
+		"nome": "UFF - Universidade Federal Fluminense",
+		"logo": "uff.jpg",
+		"programas": ["Ciência da informação", "História"]
+	},	
+	{
+		"nome": "UFPA - Universidade Federal do Pará",
+		"logo": "ufpa.jpg",
+		"programas": ["Engenharia sanitária e ambiental - PPGSA"]
+	},	
+	{
+		"nome": "UFPB - Universidade Federal da Paraíba",
+		"logo": "ufpb.jpg",
+		"programas": ["Engenharia elétrica"]
+	},	
+	{
+		"nome": "UFPEL - Universidade Federal de Pelotas",
+		"logo": "ufpel.jpg",
+		"programas": ["Memória social e patrimônio cultural"]
+	},	
+	{
+		"nome": "UNB - Universidade de Brasília",
+		"logo": "unb.jpg",
+		"programas": ["Educação", "Ciências e tecnologias em saúde", "Ciências da reabilitação"]
+	},	
+	{
+		"nome": "Univali - Universidade do Vale do Itajaí",
+		"logo": "univali.jpg",
+		"programas": ["Ciência jurídica"]
+	},	
+	{
+		"nome": "USP/RB - USP Ribeirão Preto",
+		"logo": "usp-rp.jpg",
+		"programas": ["Química"]
+	},							
+]
+
+---
+
+<head>
+	<SEO
+		title="Plataforma Athena - Sua parceira na Gestão do conhecimento científico"
+		description="Nosso foco é simplificar a burocracia e potencializar seus resultados, levando seu programa a conquistar reconhecimento nacional e internacional."
+		charset="utf-8"
+		openGraph={{
+			basic: {
+				title: "Plataforma Athena - Sua parceira na Gestão do conhecimento científico",
+				type: "",
+				image: `${baseURL}/assets/img/janus-logo-horizontal.webp`,
+			}
+		}}
+
+	/>
+	
+</head>
+
+
+<Layout>
+	<div class="hero-banner" role="banner">
+		<div class="hero-banner__content">
+			<div class="content-line-container">
+				<img src=`${baseURL}/assets/img/logo-athena-light.png` alt="Plataforma Athena" class="max-w-28 mx-auto mb-4">
+
+
+				<h1 class="hero-banner__title">Pro-Reitorias e Coordenações <br class="hidden lg:inline"> <i lang="la">Stricto&nbsp;Sensu!</i></h1>
+				<p class="hero-banner__description">Conheça a Plataforma Athena, a ferramenta ideal para te auxiliar na gestão da Produção Científica.</p>
+
+				<div class="lg:flex gap-8 mt-8 justify-center">
+
+					<a href="#contato" class="ancora btn px-5 py-3 mt-8 justify-self-center rounded border text-primary border-white bg-white duration-200 hover:text-white hover:bg-primary block">Agende uma Demonstração</a>
+					<a href="https://plataformaathena.com.br/site/form-contato?a=formulario&solicitacao=testegratis" rel="noopener noreferer" class="ancora btn px-5 py-3 mt-8 justify-self-center rounded border text-primary border-white bg-white duration-200 hover:text-white hover:bg-primary block">Solicite um teste gratuito</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="content-line relative secao" id="sobre">
+		<div class="content-line-container py-20">
+			<div class="lg:grid gap-10 lg:grid-cols-10 mx-auto max-w-6xl">
+				<div class="flex justify-center flex-col col-span-5">
+					<h2 class="uppercase text-3xl text-primary-light font-bold mb-3">Sobre a Plataforma Athena</h2>	
+						<p>A Plataforma Athena, criada pela JANUS EDUCARE, é muito mais que uma ferramenta — é a aliada estratégica que transforma dados em decisões. Integrando informações do Currículo Lattes e da Plataforma Sucupira, ela cruza tudo com os critérios da CAPES para gerar indicadores confiáveis, relatórios afiados e filtros inteligentes.</p>
+
+						<p>O resultado? Uma gestão científica mais eficiente, planejamento estratégico com base sólida e autoavaliações que realmente fazem sentido — tudo em um só lugar, tanto para programas de pós quanto para instituições inteiras. Com a Athena, a produção científica deixa de ser só número e vira estratégia.</p>
+				</div>
+
+				<div class="col-span-5 my-5 lg:my-0">
+					<div class="iframe-video-wrapper">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/lcczBqsc7Jk?si=xX7C9cQQqap8ldOa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+				</div>
+
+		</div>
+
+		<div class="custom-shape-divider-bottom-1748869204">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+			</svg>
+	</div>
+	</section>
+
+	
+
+
+	<section class="content-line bg-neutral-300 relative secao" id="servicos">	
+		
+		<div class="content-line-container py-20">
+
+			<div class="mx-auto max-w-6xl text-center">
+				<h2 class="uppercase text-3xl text-primary-light font-bold mb-2">A Plataforma</h2>
+				<p>Conheça os recursos da Athena que otimizam a gestão científica com inteligência, precisão e estratégia.</p>
+			</div>
+
+			<div class="grid md:grid-cols-3 mx-auto max-w-7xl gap-20 mt-20 funcioanlidades-wrapper">
+
+				<Card titulo="Pessoas" icone="diversity_2">
+						<p>As pessoas registradas na Plataforma Athena estão sincronizadas com a base do Currículo Lattes do CNPq e com a Plataforma Sucupira da CAPES.</p>
+				</Card>
+
+				<Card titulo="Relatórios" icone="search_insights">
+					<p>Os relatórios fornecidos pela Plataforma Athena possuem como fonte o Currículo Lattes e a Plataforma Sucupira.</p>
+				</Card>
+
+				<div class="image-wrapper">
+					<img src="assets/img/plataforma-athena/demo-athena-home.png" width={"550"} height={"auto"} alt="" class="demo-image demo-menu"/> 
+				</div>
+
+				<div class="image-wrapper">
+					<img src="assets/img/plataforma-athena/athena-demonstracao-relatorios.png" width={"550"} height={"auto"} alt=""  class="demo-image demo-dados"/> 
+				</div>	
+				
+				<Card titulo="Formulários" icone="assignment">
+					<p>Os formulários na Plataforma Athena foram criados para que os docentes, discentes e egressos interajam na complementação de informações qualitativas.</p>
+				</Card>					
+
+				<Card titulo="Autoavaliação" icone="question_exchange">
+					<p>Este módulo propõe a ser uma ferramenta para que os gestores possam estabelecer um processo estruturado de autoavaliação, visando à elaboração do Planejamento Estratégico.</p>
+				</Card>		
+				
+				<Card titulo="Alertas Sucupira" icone="report">
+					<p>Auxilia os usuários na elaboração do Relatório Sucupira, fornecendo alertas para identificação de eventuais lacunas de preenchimento.</p>
+				</Card>				
+				
+				<Card titulo="Tabela de Indicadores" icone="monitoring">
+					<p>Essas tabelas com indicadores diversos agrupadas em duas categorias: Dados Gerais e Produtividade.</p>
+				</Card>			
+				
+				<Card titulo="Projetos de Pesquisa" icone="quick_reference_all">
+					<p>Repositório de Projetos de Pesquisa dos docentes e discentes extraídos a partir dos Currículos Lattes e da Plataforma Sucupira.</p>
+				</Card>			
+				
+				<div class=`image-wrapper  bg-[url(${baseURL}/assets/img/plataforma-athena/analise-dados.jpg)] bg-center bg-cover rounded-xl`>
+					<img src="assets/img/plataforma-athena/analise-dados.jpg" width={"550"} height={"auto"} alt=""  class="analise-dados rounded w-full h-full"/> 
+				</div>
+
+				
+				<Card titulo="E muito mais" icone="more_horiz">
+					<p>E ainda tem muito mais a ser explorado!</p>
+					<a href="#contato" class="ancora btn px-5 py-3 mt-8 justify-self-center rounded border text-white border-white bg-primary duration-200 hover:text-primary hover:bg-white hover:border-primary block w-full">Saiba mais sobre a plataforma!</a>
+				</Card>			
+
+				<div class="flex items-center justify-center">
+					<div class="image-wrapper">
+						<img src=`${baseURL}/assets/img/logo-athena.png` alt="Plataforma Athena" class="max-w-40 main-header__logo">
+					</div>
+				</div>
+				
+		
+			</div>
+
+
+		
+		</div>
+	</section>
+
+	<section class="content-line secao" id="workshops">
+		<div class="content-line-container py-20">
+			<div class="mx-auto max-w-6xl mb-5">
+				<h2 class="uppercase text-3xl text-primary-light font-bold mb-2">Instituções</h2>
+				<p>Conheça todas as instituições que já utilizam o Athena para otimizar sua gestão de Produção Científica.</p>
+			</div>
+
+			<div class="clientes-wrapper max-w-6xl mx-auto">
+				{
+					clientes.map((cliente) => {
+						return (
+							<div class="logo-cliente">
+									<img src={`${baseURL}/assets/img/logos-clientes/${cliente.logo}`} alt={cliente.nome} class="max-w-full">
+							</div>
+						)
+					})
+				}
+			</div>
+
+			<div class="mx-auto max-w-6xl mt-12 mb-5">
+				<h2 class="uppercase text-3xl text-primary-light font-bold mb-2">Programas</h2>
+				<p>Conheça todas as instituições que já utilizam o Athena para otimizar sua gestão de Produção Científica.</p>
+			</div>			
+
+			<div class="clientes-wrapper clientes-programas max-w-6xl mx-auto">
+				{
+					clientesProgramas.map((cliente) => {
+						return (
+							<div class="logo-cliente" data-programas={cliente.programas}>
+									<img src={`${baseURL}/assets/img/logos-clientes/${cliente.logo}`} alt={cliente.nome} class="max-w-full">
+							</div>
+						)
+					})
+				}
+
+				<div id="tooltipTemplate" style="display: none;">
+					<div class="tooltip-template"></div>
+				</div>
+
+			</div>
+
+
+
+	
+
+
+
+
+		</div>
+	</section>	
+
+
+
+
+	
+
+
+
+</Layout>
