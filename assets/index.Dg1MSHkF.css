@@ -52,6 +52,7 @@
     --color-green-50: oklch(98.2% .018 155.826);
     --color-blue-400: oklch(70.7% .165 254.624);
     --color-blue-800: oklch(42.4% .199 265.638);
+    --color-blue-900: oklch(37.9% .146 265.522);
     --color-blue-950: oklch(28.2% .091 267.935);
     --color-gray-200: oklch(92.8% .006 264.531);
     --color-neutral-100: oklch(97% 0 0);
@@ -1236,7 +1237,7 @@ html {
 }
 
 .clientes-wrapper {
-  gap: calc(var(--spacing) * 8);
+  gap: calc(var(--spacing) * 4);
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   display: grid;
 }
@@ -1255,7 +1256,7 @@ html {
 }
 
 .clientes-programas {
-  gap: calc(var(--spacing) * 8);
+  gap: calc(var(--spacing) * 4);
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   display: grid;
 }
@@ -1266,9 +1267,11 @@ html {
 }
 
 .clientes-programas .logo-cliente p {
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-primary-light);
+  color: var(--color-blue-900);
 }
 
 .clientes-programas .logo-cliente figure {
@@ -1278,6 +1281,8 @@ html {
 }
 
 .clientes-programas .logo-cliente figcaption {
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
   --tw-leading: 1;
   --tw-font-weight: var(--font-weight-semibold);
   line-height: 1;
