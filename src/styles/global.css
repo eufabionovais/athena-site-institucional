@@ -363,7 +363,7 @@ html {
 }
 
 .clientes-wrapper {
-  @apply grid gap-8;
+  @apply grid gap-4;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
@@ -372,18 +372,18 @@ html {
 }
 
 .clientes-programas {
-  @apply grid gap-8;
+  @apply grid gap-4;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   .logo-cliente {
     @apply text-center items-start;
     p {
-      @apply text-primary-light font-semibold;
+      @apply font-semibold text-blue-900 text-lg;
     }
     figure {
       @apply flex flex-col h-full;
     }
     figcaption {
-      @apply font-semibold text-primary leading-none  mt-auto;
+      @apply font-semibold text-primary leading-none  mt-auto  text-sm;
     }
   }
 }
