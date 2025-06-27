@@ -368,14 +368,14 @@ html {
 }
 
 .logo-cliente {
-  @apply border-blue-950 border-2 rounded-md p-4 flex items-center justify-center overflow-hidden bg-white;
+  @apply border-neutral-300 border-2 rounded-md p-4 flex items-center justify-center overflow-hidden bg-white;
 }
 
 .clientes-programas {
   @apply grid gap-4;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   .logo-cliente {
-    @apply text-center items-start;
+    @apply text-center items-start p-0 pt-4;
     p {
       @apply font-semibold text-blue-900 text-lg;
     }
@@ -383,7 +383,7 @@ html {
       @apply flex flex-col h-full;
     }
     figcaption {
-      @apply font-semibold text-primary leading-none  mt-auto  text-sm;
+      @apply font-semibold text-white  mt-auto  text-sm px-2 bg-primary min-h-[50px] flex items-center justify-center;
     }
   }
 }
