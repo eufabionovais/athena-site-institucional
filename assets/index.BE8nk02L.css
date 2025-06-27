@@ -1237,7 +1237,7 @@ html {
 
 .clientes-wrapper {
   gap: calc(var(--spacing) * 8);
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   display: grid;
 }
 
@@ -1252,6 +1252,38 @@ html {
   align-items: center;
   display: flex;
   overflow: hidden;
+}
+
+.clientes-programas {
+  gap: calc(var(--spacing) * 8);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: grid;
+}
+
+.clientes-programas .logo-cliente {
+  text-align: center;
+  align-items: flex-start;
+}
+
+.clientes-programas .logo-cliente p {
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-light);
+}
+
+.clientes-programas .logo-cliente figure {
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+}
+
+.clientes-programas .logo-cliente figcaption {
+  --tw-leading: 1;
+  --tw-font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-top: auto;
 }
 
 .iframe-video-wrapper {
