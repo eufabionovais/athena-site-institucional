@@ -252,27 +252,27 @@ if(linkEmail) {
 }
 
 
-const clientesProgramas = document.querySelectorAll(".clientes-programas .logo-cliente");
-const templateOuter = document.querySelector('#tooltipTemplate');
-const template = templateOuter.querySelector(".tooltip-template");
+// const clientesProgramas = document.querySelectorAll(".clientes-programas .logo-cliente");
+// const templateOuter = document.querySelector('#tooltipTemplate');
+// const template = templateOuter.querySelector(".tooltip-template");
 
-clientesProgramas.forEach((cliente) => {
+// clientesProgramas.forEach((cliente) => {
 
-  cliente.addEventListener("mouseover", () => {
+//   cliente.addEventListener("mouseover", () => {
 
-    const programas = cliente.getAttribute("data-programas");
-    const programasSplitted = programas.split(",");
-    let programasLista = '';
-    programasSplitted.forEach((programa) => {
-      programasLista += `<p class='mb-0'>&bull; ${programa}</p>` 
-    })
+//     const programas = cliente.getAttribute("data-programas");
+//     const programasSplitted = programas.split(",");
+//     let programasLista = '';
+//     programasSplitted.forEach((programa) => {
+//       programasLista += `<p class='mb-0'>&bull; ${programa}</p>` 
+//     })
   
-    template.innerHTML = programasLista;    
+//     template.innerHTML = programasLista;    
 
-    tippy(cliente, {
-      content: template.innerHTML,
-      allowHTML: true,
-    });
-  });
-});
+//     tippy(cliente, {
+//       content: template.innerHTML,
+//       allowHTML: true,
+//     });
+//   });
+// });
 

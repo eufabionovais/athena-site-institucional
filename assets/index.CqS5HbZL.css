@@ -48,6 +48,7 @@
   :root, :host {
     --font-sans: "Inter", sans-serif;
     --font-mono: "IBM Plex Mono", monospace;
+    --color-red-300: oklch(80.8% .114 19.571);
     --color-red-700: oklch(50.5% .213 27.518);
     --color-green-50: oklch(98.2% .018 155.826);
     --color-blue-400: oklch(70.7% .165 254.624);
@@ -472,10 +473,6 @@
     max-width: calc(var(--spacing) * 40);
   }
 
-  .max-w-full {
-    max-width: 100%;
-  }
-
   .transform {
     transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
   }
@@ -869,7 +866,7 @@ p ~ p {
   min-height: 85vh;
   padding-inline: calc(var(--spacing) * 6);
   padding-block: calc(var(--spacing) * 10);
-  background-image: url("/athena-site-institucional/assets/banner-home.VssTBpTU.jpg");
+  background-image: url("/assets/banner-home.VssTBpTU.jpg");
   background-position: center;
   background-size: cover;
   display: grid;
@@ -1237,7 +1234,7 @@ html {
 
 .clientes-wrapper {
   gap: calc(var(--spacing) * 4);
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
   display: grid;
 }
 
@@ -1247,22 +1244,35 @@ html {
   border-width: 2px;
   border-color: var(--color-neutral-300);
   background-color: var(--color-white);
-  padding: calc(var(--spacing) * 4);
   justify-content: center;
   align-items: center;
   display: flex;
   overflow: hidden;
 }
 
+.logo-cliente .logo-wrapper {
+  margin-inline: auto;
+  margin-block: calc(var(--spacing) * 4);
+  aspect-ratio: 1;
+  background-color: var(--color-red-300);
+  width: 120px;
+}
+
+.logo-cliente .logo-wrapper img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .clientes-programas {
   gap: calc(var(--spacing) * 4);
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
   display: grid;
 }
 
 .clientes-programas .logo-cliente {
-  padding: calc(var(--spacing) * 0);
-  padding-top: calc(var(--spacing) * 4);
+  width: 100%;
+  padding-top: calc(var(--spacing) * 2);
   text-align: center;
   align-items: flex-start;
 }
@@ -1277,6 +1287,7 @@ html {
 
 .clientes-programas .logo-cliente figure {
   flex-direction: column;
+  width: 100%;
   height: 100%;
   display: flex;
 }
@@ -1287,8 +1298,6 @@ html {
   padding-inline: calc(var(--spacing) * 2);
   font-size: var(--text-sm);
   line-height: var(--tw-leading, var(--text-sm--line-height));
-  --tw-font-weight: var(--font-weight-semibold);
-  font-weight: var(--font-weight-semibold);
   color: var(--color-white);
   justify-content: center;
   align-items: center;
