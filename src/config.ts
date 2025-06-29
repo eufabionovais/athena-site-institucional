@@ -1,4 +1,4 @@
-export const baseURL = import.meta.env.PROD ? import.meta.env.BASE_URL : '';
+export const baseURL = import.meta.env.PROD ? import.meta.env.BASE_URL : '.';
 
 
 

@@ -395,7 +395,9 @@ const clientesProgramas = [
 					clientes.map((cliente) => {
 						return (
 							<div class="logo-cliente">
-									<img src={`${baseURL}/assets/img/logos-clientes/${cliente.logo}`} alt={cliente.nome} class="max-w-full">
+								<div class="logo-wrapper">
+									<img src={`${baseURL}/assets/img/logos-clientes/${cliente.logo}`} alt={cliente.nome}>
+								</div>
 							</div>
 						)
 					})
@@ -414,7 +416,9 @@ const clientesProgramas = [
 							<div class="logo-cliente" data-programas={cliente.programas}>
 									<figure>
 										<p>{cliente.nome}</p>
-										<img src={`${baseURL}/assets/img/logos-programas/${cliente.logo}`} alt={cliente.nome} class="max-w-full">
+										<div class="logo-wrapper">
+											<img src={`${baseURL}/assets/img/logos-programas/${cliente.logo}`} alt={cliente.nome} >
+										</div>
 										<figcaption>{cliente.programas[0]}</figcaption>
 									</figure>
 							</div>
@@ -422,9 +426,9 @@ const clientesProgramas = [
 					})
 				}
 
-				<div id="tooltipTemplate" style="display: none;">
+				{/* <div id="tooltipTemplate" style="display: none;">
 					<div class="tooltip-template"></div>
-				</div>
+				</div> */}
 
 			</div>
 

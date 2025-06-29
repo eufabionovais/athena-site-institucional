@@ -364,26 +364,32 @@ html {
 
 .clientes-wrapper {
   @apply grid gap-4;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
 }
 
 .logo-cliente {
-  @apply border-neutral-300 border-2 rounded-md p-4 flex items-center justify-center overflow-hidden bg-white;
+  @apply border-neutral-300 border-2 rounded-md flex items-center justify-center overflow-hidden bg-white;
+  .logo-wrapper {
+    @apply w-[120px] aspect-square bg-red-300 mx-auto my-4;
+    img {
+      @apply max-w-full max-h-full object-contain;
+    }
+  }
 }
 
 .clientes-programas {
   @apply grid gap-4;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
   .logo-cliente {
-    @apply text-center items-start p-0 pt-4;
+    @apply text-center items-start w-full  pt-2;
     p {
       @apply font-semibold text-blue-900 text-lg;
     }
     figure {
-      @apply flex flex-col h-full;
+      @apply flex flex-col h-full w-full;
     }
     figcaption {
-      @apply font-semibold text-white  mt-auto  text-sm px-2 bg-primary min-h-[50px] flex items-center justify-center;
+      @apply  text-white  mt-auto  text-sm px-2 bg-primary min-h-[50px] flex items-center justify-center;
     }
   }
 }

@@ -1,5 +1,6 @@
 ---
 const {classList, theme = "regular", formWorkshop, formId, ...props} = Astro.props;
+const isProd = import.meta.env.PROD;
 
 
 let formOptions = [
@@ -82,16 +83,24 @@ let formOptions = [
   <label for=`${formId}-mensagem`>Mensagem</label>
   <textarea name="mensagem" id=`${formId}-mensagem` ></textarea>
   </div>	
-  
-  <div class="form-group md:col-span-2">
-    <button type="submit">Agendar demonstração</button>
+
+  <div class="form-feedback-message hidden md:col-span-2" data-status="">
+    <p></p>
+  </div>  
+
+  <div class="form-group">
+    {
+      isProd &&
+      <div class="g-recaptcha" data-sitekey="6LcyTm0rAAAAAI_dr6j7zuafWL-QCTAd-qJ1Piye"></div>
+    }
   </div>
+  
+  <div class="form-group">
+    <button type="submit">Enviar</button>
+  </div>
+
 
 </form>
 
-<script>
 
-
-
-</script>
 

@@ -10,6 +10,9 @@ if($('[data-mask-3-digits]').length) {
 
 if($("[data-form-client-validation]").length) {
 
+  emailjs.init({
+    publicKey: 'GwODNXFIOP_Rqt42p',
+  });
   
 
   $("[data-form-client-validation]").each(function(){
@@ -76,17 +79,81 @@ if($("[data-form-client-validation]").length) {
       // errorPlacement: function(error, element) {
 
       // },      
-      submitHandler: function(form, e) {
+      submitHandler: async function(form, e) {
         e.preventDefault();
 
-        debugger
-        const formIdentifier = $(form).attr("id");
-        
 
-       
+        debugger
+
+        const submitButton = $(form).find(":submit");
+        const originalSubmitButtonText = submitButton.text();
+        const loadingSubmitButtonText = "Enviando...";
+        submitButton.prop("disabled", true);
+
+        submitButton.text(loadingSubmitButtonText);
+        
+        let message = '';
+        let status = '';        
+        let assuntoEmail = '';
+
+        const contatoAssunto = $(form).find("[name='assunto']").val();
+        switch(contatoAssunto) {
+          case "assessoria-sucupira" : assuntoEmail = "Assessoria Plataforma Sucupira";
+          break;
+          case "assessoria-lattes" : assuntoEmail = "Assessoria Currículo Lattes";
+          break;
+          case "workshop-sucupira" : assuntoEmail = "Workshop Plataforma Sucupira";
+          break;                                        
+          case "workshop-lattes" : assuntoEmail = "Workshop Currículo Lattes";
+          break;                                        
+          case "apcn" : assuntoEmail = "Proposta de Cursos Novos - APCN";          
+          break;          
+          default: assuntoEmail = "Assunto não definido"          
+        }
+
+
+        var formData = new FormData(form);
+
+        formData.set("assunto", assuntoEmail);
+
+        formData.append('service_id', 'service_0q9f8li');
+        formData.append('template_id', 'template_nm76atc');
+        formData.append('user_id', 'GwODNXFIOP_Rqt42p');
+     
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+            type: 'POST',
+            data: formData,
+            contentType: false, // auto-detection
+            processData: false // no need to parse formData to string
+        }).done(function() {
+          message = `
+                    <h4>Mensagem recebida com sucesso!</h4>
+                    <p>Entraremos em contato em breve.</p>
+                    `;  
+            status = "positivo";   
+        }).fail(function(error) {
+          message = `
+                      <h4>Houve um erro ao receber sua mensagem!</h4>
+                      <p>Tente novamente mais tarde.</p>
+                      `;              
+              status = "negativo";
+        }).always(function(){
+          $(form).find(".form-feedback-message").attr("data-status", status);   
+              $(form).find(".form-feedback-message").html(message);
+              $(form).find(".form-feedback-message").removeClass("hidden");
+
+              $(form)[0].reset();
+
+              submitButton.text(originalSubmitButtonText);
+
+              setTimeout(() => {
+                $(form).find(".form-feedback-message").addClass("hidden");
+                submitButton.prop("disabled", false);
+              },3000)          
+        });
+
 
         return false;
-
 
       }
     })
@@ -99,8 +166,6 @@ if($("[data-form-client-validation]").length) {
     $(this).on("change", function() {
       const valorSelecionado = $(this).val();
   
-      console.log(valorSelecionado)
-  
       if(valorSelecionado === "workshop-lattes" || valorSelecionado === "workshop-sucupira") {
         $(this).parents("form").find("[data-numero-participantes]").removeAttr("hidden");
       } else {
@@ -109,6 +174,10 @@ if($("[data-form-client-validation]").length) {
       $(this).parents("form").validate();
     })
   })
+
+
+
+
 
 
 
