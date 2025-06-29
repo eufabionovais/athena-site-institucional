@@ -866,7 +866,7 @@ p ~ p {
   min-height: 85vh;
   padding-inline: calc(var(--spacing) * 6);
   padding-block: calc(var(--spacing) * 10);
-  background-image: url("/assets/banner-home.VssTBpTU.jpg");
+  background-image: url("/athena-site-institucional/assets/banner-home.VssTBpTU.jpg");
   background-position: center;
   background-size: cover;
   display: grid;
