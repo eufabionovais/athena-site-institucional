@@ -116,8 +116,8 @@ if($("[data-form-client-validation]").length) {
 
         formData.set("assunto", assuntoEmail);
 
-        formData.append('service_id', 'service_0q9f8li');
-        formData.append('template_id', 'template_nm76atc');
+        formData.append('service_id', 'service_3z1rdt8');
+        formData.append('template_id', 'template_pauoklm');
         formData.append('user_id', 'GwODNXFIOP_Rqt42p');
      
         $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
