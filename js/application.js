@@ -26,7 +26,7 @@ function setScrolledClass() {
 
 // Habilita link ativo de acordo com seção visível
 const sections = document.querySelectorAll(".secao");
-const menuItems = document.querySelectorAll(".main-menu__item:not(.no-anchor), .ancora");
+const menuItems = document.querySelectorAll(".main-menu__item:not(.no-anchor, button), .ancora");
 
 sections.forEach((secao, i) => {
   const id = secao.getAttribute("id");  

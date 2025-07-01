@@ -116,8 +116,8 @@ if($("[data-form-client-validation]").length) {
 
         formData.set("assunto", assuntoEmail);
 
-        formData.append('service_id', 'service_3z1rdt8');
-        formData.append('template_id', 'template_pauoklm');
+        formData.append('service_id', 'servico_email_athena');
+        formData.append('template_id', 'template_contato_athena');
         formData.append('user_id', 'GwODNXFIOP_Rqt42p');
      
         $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
@@ -132,6 +132,7 @@ if($("[data-form-client-validation]").length) {
                     `;  
             status = "positivo";   
         }).fail(function(error) {
+          console.log(error)
           message = `
                       <h4>Houve um erro ao receber sua mensagem!</h4>
                       <p>Tente novamente mais tarde.</p>
