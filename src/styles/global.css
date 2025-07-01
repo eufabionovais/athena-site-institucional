@@ -3,6 +3,7 @@
 :root {
   --brand-primary: #03738c;
   --brand-primary-light: #56b5cc;
+  --brand-primary-dark: #196272;
   --brand-secondary: #E4D59B;
   --brand-neutral: #cacaca;
   --brand-highlight: #55d6f5;
@@ -78,10 +79,57 @@ p ~ p {
   }
 }
 
+.main-menu {
+  li {
+    @apply relative;
+    &:hover {
+      .main-menu__sub-menu {
+        top: 100%;
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+}
+
+
+/* .main-menu__sub-menu-wrapper {
+  border: solid 1px red;
+  @apply absolute opacity-0 invisible translate-y-4 transition duration-200 right-0;
+} */
+
+.main-menu__sub-menu {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 3px 5px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all .3s ease;
+  li {
+    @apply text-nowrap
+  }
+  a {
+    @apply text-primary block py-1 px-4 transition duration-150 rounded;
+    &:hover {
+      @apply bg-primary text-white
+    }
+  }
+}
 
 .main-menu__item,
 .menu__item {
-  @apply px-4 py-2 bg-transparent rounded duration-500 font-bold text-primary;
+  @apply px-4 py-2 bg-transparent rounded duration-500 font-bold text-primary cursor-pointer;
+  /* &:focus-within,
+  &:hover,
+  &:active {
+    + .main-menu__sub-menu {
+      @apply opacity-100 visible translate-y-0;
+    }
+  } */
 }
 
 
@@ -91,6 +139,7 @@ p ~ p {
 .menu__item:hover  {
   @apply bg-primary text-white;
 }
+
 
 .hero-banner {
   @apply relative grid min-h-[85vh]  bg-[url('/public/assets/img/banner-home.jpg')] bg-cover bg-center before:absolute before:inset-0 before:bg-primary before:opacity-75 isolate px-6 py-10;
@@ -231,7 +280,8 @@ label.error {
 }
 
 .texto-destaque {
-  @apply text-primary-light font-semibold;
+  color: var(--brand-primary-dark);
+  font-weight: bold;
 }
 
 .btn-menu {
@@ -445,3 +495,17 @@ html {
   }
 }
 
+
+
+.form-feedback-message {
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  &[data-status="positivo"] {
+    background: green;
+  }  
+  &[data-status="negativo"] {
+    background: red;
+  }
+}

@@ -3,12 +3,12 @@ import { baseURL } from "../config"
 ---
 
 <header class="content-line main-header">
-  <div class="content-line-container px-2.5 px-2.5">
+  <div class="content-line-container px-2.5">
       <a href=`${baseURL}/` class="logo__link">
         <img src=`${baseURL}/assets/img/logo-athena.png` alt="Plataforma Athena" class="max-w-40 main-header__logo">
       </a>
       <nav>
-        <ul class="flex items-center gap-3">
+        <ul class="flex items-center gap-3 main-menu">
           <li>
             <a href="#sobre" class="main-menu__item">Sobre</a>
           </li>
@@ -22,7 +22,22 @@ import { baseURL } from "../config"
             <a href="#contato" class="main-menu__item">Contato</a>
           </li>   
           <li>
-            <a href="https://plataformaathena.com.br/auth/login" target="_blank" rel="noopener noreferer" class="main-menu__item no-anchor">Acesso</a>
+            <button class="main-menu__item flex items-center gap-3 ml-8 bg-primary-light"><span class="material-symbols-outlined">
+              lock_person
+              </span>
+            Acessar</button>
+         
+              <ul class="main-menu__sub-menu">
+                <li>
+                  <a href="https://plataformaathena.com.br/auth/login"  target="_blank" rel="noopener noreferer">Plataforma Athena</a>
+                </li>
+                <li>
+                  <a href="https://plataformaathena.com.br/site/login-form"  target="_blank" rel="noopener noreferer">Formulários</a>
+                </li>
+            
+
+              
+            </ul>
           </li>                              
         </ul>
       </nav>
