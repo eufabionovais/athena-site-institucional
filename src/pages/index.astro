@@ -1,6 +1,5 @@
 ---
 import { SEO } from "astro-seo";
-import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import { baseURL } from "../config";
@@ -91,87 +90,10 @@ const clientes = [
 	},				
 ]
 
-// const clientesProgramas = [
 
-// 	// {
-// 	// 	"nome": "IPEA",
-// 	// 	"logo": "ipea.jpg",
-// 	// 	"programas": ["Políticas públicas e desenvolvimento"]
-// 	// },	
-// 	{
-// 		"nome": "PUC-Rio",
-// 		"logo": "puc-rio-educacao.jpg",
-// 		"programas": ["Educação", "Direito"]
-// 	},	
-// 	{
-// 		"nome": "UEL - Universidade Estadual de Londrina",
-// 		"logo": "uel-enfermagem.jpg",
-// 		"programas": ["Enfermagem"]
-// 	},	
-// 	{
-// 		"nome": "UERJ - Universidade Estadual do Rio de Janeiro",
-// 		"logo": "uerj-direito.jpg",
-// 		"programas": ["Direito"]
-// 	},	
-// 	{
-// 		"nome": "UFF - Universidade Federal Fluminense",
-// 		"logo": "uff-ciencia-da-informacao.jpg",
-// 		"programas": ["Ciência da informação"]
-// 	},	
-// 	{
-// 		"nome": "UFF - Universidade Federal Fluminense",
-// 		"logo": "uff-historia.jpg",
-// 		"programas": ["História"]
-// 	},		
-// 	{
-// 		"nome": "UFPA - Universidade Federal do Pará",
-// 		"logo": "ufpa-engenharia-sanitaria-ambiental.jpg",
-// 		"programas": ["PPGSA - Engenharia sanitária e ambiental"]
-// 	},	
-// 	{
-// 		"nome": "UFPB - Universidade Federal da Paraíba",
-// 		"logo": "ufpb-engenharia-eletrica.jpg",
-// 		"programas": ["Engenharia elétrica"]
-// 	},	
-// 	{
-// 		"nome": "UFPEL - Universidade Federal de Pelotas",
-// 		"logo": "ufpel-memoria-cultural.jpg",
-// 		"programas": ["Memória social e patrimônio cultural"]
-// 	},	
-// 	{
-// 		"nome": "UNB - Universidade de Brasília",
-// 		"logo": "unb-educacao.jpg",
-// 		"programas": ["Educação"]
-// 	},	
-// 	{
-// 		"nome": "UNB - Universidade de Brasília",
-// 		"logo": "unb-ciencias-reabilitacao.jpg",
-// 		"programas": ["Ciências da reabilitação"]
-// 	},	
-// 	{
-// 		"nome": "UNB - Universidade de Brasília",
-// 		"logo": "unb-ciencia-tecnologia-saude.jpg",
-// 		"programas": ["Ciências e tecnologias em saúde"]
-// 	},			
-// 	{
-// 		"nome": "Univali - Universidade do Vale do Itajaí",
-// 		"logo": "univali-ciencia-juridica.jpg",
-// 		"programas": ["Ciência jurídica"]
-// 	},	
-// 	{
-// 		"nome": "USP/RB - USP Ribeirão Preto",
-// 		"logo": "usp-rp-quimica.jpg",
-// 		"programas": ["Química"]
-// 	},							
-// ]
 
 const clientesProgramas = [
 
-	// {
-	// 	"nome": "IPEA",
-	// 	"logo": "ipea.jpg",
-	// 	"programas": ["Políticas públicas e desenvolvimento"]
-	// },	
 	{
 		"nome": "PUC-Rio",
 		"logo": "puc-rio-educacao.jpg",
@@ -250,7 +172,7 @@ const clientesProgramas = [
 			basic: {
 				title: "Plataforma Athena - Sua parceira na Gestão do conhecimento científico",
 				type: "",
-				image: `${baseURL}/assets/img/janus-logo-horizontal.webp`,
+				image: `${baseURL}/assets/img/logo-plataforma-athena.png`,
 			}
 		}}
 
@@ -265,14 +187,11 @@ const clientesProgramas = [
 			<div class="content-line-container">
 				<img src=`${baseURL}/assets/img/logo-athena-light.png` alt="Plataforma Athena" class="max-w-28 mx-auto mb-4">
 
-
 				<h1 class="hero-banner__title">Pro-Reitorias e Coordenações <br class="hidden lg:inline"> <i lang="la">Stricto&nbsp;Sensu!</i></h1>
 				<p class="hero-banner__description">Conheça a Plataforma Athena, a ferramenta ideal para te auxiliar na gestão da Produção Científica.</p>
 
 				<div class="lg:flex gap-8 mt-8 justify-center">
-
-					<a href="#contato" class="ancora uppercase btn px-5 py-3 mt-8 justify-self-center rounded border text-primary border-white bg-white duration-200 hover:text-white hover:bg-primary-light block">Agende uma Demonstração</a>
-					<a href="https://plataformaathena.com.br/site/form-contato?a=formulario&solicitacao=testegratis" rel="noopener noreferer" class="ancora uppercase btn px-5 py-3 mt-8 justify-self-center rounded border text-white border-white  duration-200 hover:text-white hover:bg-primary-light block">Solicite um teste gratuito</a>
+					<a href="https://plataformaathena.com.br/site/form-contato?a=formulario&solicitacao=testegratis" rel="noopener noreferer" target="_blank" class=" uppercase btn px-5 py-3 mt-8 justify-self-center rounded border text-primary border-white bg-white duration-200 hover:text-white hover:bg-primary-light block">Solicite um teste gratuito</a>
 				</div>
 			</div>
 		</div>
@@ -286,6 +205,9 @@ const clientesProgramas = [
 						<p>A <span class="texto-destaque">Plataforma Athena</span>, criada pela <span class="texto-destaque">JANUS EDUCARE</span>, é muito mais que uma ferramenta — é a <span class="texto-destaque">aliada estratégica</span> que transforma dados em decisões. Integrando informações do <span class="texto-destaque">Currículo Lattes e da Plataforma Sucupira</span>, ela cruza tudo com os critérios da <span class="texto-destaque">CAPES</span> para gerar indicadores confiáveis, relatórios afiados e filtros inteligentes.</p>
 
 						<p>O resultado? Uma <span class="texto-destaque">gestão científica mais eficiente</span>, planejamento estratégico com base sólida e autoavaliações que realmente fazem sentido — <span class="texto-destaque">tudo em um só lugar</span>, tanto para programas de pós quanto para instituições inteiras. Com a Athena, a produção científica deixa de ser só número e vira estratégia.</p>
+
+						<a href="#contato" rel="noopener noreferer" target="_blank" class="ancora btn px-3 py-2 mt-8 justify-self-center rounded border text-white border-white bg-primary duration-200 hover:text-white hover:bg-primary-light self-start">Quer saber mais? Agende uma demonstração</a>
+
 				</div>
 
 				<div class="col-span-5 my-5 lg:my-0">
@@ -362,9 +284,19 @@ const clientesProgramas = [
 				</Card>					
 
 				
-				<Card titulo="E muito mais" icone="more_horiz">
+				<Card titulo="E muito mais..." icone="more_horiz">
 					<p>E ainda tem muito mais a ser explorado!</p>
-					<a href="#contato" class="ancora btn px-5 py-3 mt-8 justify-self-center rounded border text-white border-white bg-primary duration-200 hover:text-primary hover:bg-white hover:border-primary block w-full">Saiba mais sobre a plataforma!</a>
+
+					<p class=" flex justify-center">
+						<a href="https://plataformaathena.com.br/site/form-contato?a=formulario&solicitacao=testegratis" rel="noopener noreferer" target="_blank" class="btn px-3 py-2 justify-self-center rounded border text-white border-white bg-primary duration-200 hover:text-white hover:bg-primary-light self-center">Solicite um teste gratuito</a>		
+					</p>					
+
+					<p class="text-center font-bold">ou</p>
+
+					<p class="flex justify-center">
+						<a href="#contato" rel="noopener noreferer" target="_blank" class="ancora btn px-3 py-2 justify-self-center rounded border text-primary border-primary bg-white duration-200 hover:text-white hover:bg-primary-light self-center">Agende uma demonstração</a>					
+					</p>
+
 				</Card>			
 
 				
