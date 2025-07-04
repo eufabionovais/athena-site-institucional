@@ -541,6 +541,14 @@
     row-gap: calc(var(--spacing) * 4);
   }
 
+  .self-center {
+    align-self: center;
+  }
+
+  .self-start {
+    align-self: flex-start;
+  }
+
   .justify-self-center {
     justify-self: center;
   }
@@ -564,6 +572,10 @@
 
   .border-gray-200 {
     border-color: var(--color-gray-200);
+  }
+
+  .border-primary {
+    border-color: var(--color-primary);
   }
 
   .border-white {
@@ -604,6 +616,10 @@
 
   .px-2\.5 {
     padding-inline: calc(var(--spacing) * 2.5);
+  }
+
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
   }
 
   .px-5 {
@@ -699,24 +715,12 @@
   }
 
   @media (hover: hover) {
-    .hover\:border-primary:hover {
-      border-color: var(--color-primary);
-    }
-
     .hover\:bg-primary-light:hover {
       background-color: var(--color-primary-light);
     }
 
-    .hover\:bg-white:hover {
-      background-color: var(--color-white);
-    }
-
     .hover\:text-blue-800:hover {
       color: var(--color-blue-800);
-    }
-
-    .hover\:text-primary:hover {
-      color: var(--color-primary);
     }
 
     .hover\:text-white:hover {
@@ -923,7 +927,7 @@ p ~ p {
   min-height: 85vh;
   padding-inline: calc(var(--spacing) * 6);
   padding-block: calc(var(--spacing) * 10);
-  background-image: url("/athena-site-institucional/assets/banner-home.VssTBpTU.jpg");
+  background-image: url("/assets/banner-home.VssTBpTU.jpg");
   background-position: center;
   background-size: cover;
   display: grid;
