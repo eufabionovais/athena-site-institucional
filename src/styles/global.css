@@ -27,9 +27,6 @@
   }
 }
 
-/* .general-wrapper {
-  @apply pt-20;
-} */
 
 #smooth-content {
   @apply pt-20;
@@ -40,7 +37,6 @@ body {
 }
 
 :is(h1,h2,h3,h4,h5,h6) {
-  /* font-family: "Manrope", sans-serif; */
   font-family: "Roboto Slab", serif;
 }
 
@@ -93,11 +89,6 @@ p ~ p {
 }
 
 
-/* .main-menu__sub-menu-wrapper {
-  border: solid 1px red;
-  @apply absolute opacity-0 invisible translate-y-4 transition duration-200 right-0;
-} */
-
 .main-menu__sub-menu {
   opacity: 0;
   pointer-events: none;
@@ -123,13 +114,6 @@ p ~ p {
 .main-menu__item,
 .menu__item {
   @apply px-4 py-2 bg-transparent rounded duration-500 font-bold text-primary cursor-pointer;
-  /* &:focus-within,
-  &:hover,
-  &:active {
-    + .main-menu__sub-menu {
-      @apply opacity-100 visible translate-y-0;
-    }
-  } */
 }
 
 
