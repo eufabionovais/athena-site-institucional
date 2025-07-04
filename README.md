@@ -1,48 +1,76 @@
-# Astro Starter Kit: Basics
+# Site Institucional Plataforma Athena
 
-```sh
-npm create astro@latest -- --template basics
-```
+Projeto para o site institucional da Plataforma Athena, assessoria para pós-graduação Stricto Sensu.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Acesse: [https://plataformaathena.com.br](https://plataformaathena.com.br)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+O site foi desenvolvido com [Astro Build](https://astro.build/). Acesse o site para visualizar a documentação.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Como os demais frameworks modernos, é necessário ter a plataforma [NodeJS](https://nodejs.org/) instalada para poder executar o projeto.
 
-## 🚀 Project Structure
+## 🚀 Estrutura do Projeto
 
-Inside of your Astro project, you'll see the following folders and files:
+O projeto segue a seguinte estrutura:
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+└── /
+    ├── README.md
+    ├── astro.config.mjs
+    ├── package.json
+    ├── pnpm-lock.yaml
+    ├── pnpm-workspace.yaml
+    ├── tsconfig.json
+    ├── .env.dev
+    ├── .env.homol
+    ├── .env.prod
+    ├── public/
+    │   ├── assets/
+    │   │   └── img/
+    │   │       ├── banner-home.webp
+    │   │       ├── janus-logo-horizontal.webp
+    │   │       ├── plataforma-athena/
+    │   │       └── servicos/
+    │   ├── js/
+    │   │   ├── application.js
+    │   │   └── form-validation.js
+    │   └── vendors/
+    │       ├── gsap/
+    │       ├── jquery-mask/
+    │       └── jquery-validate/
+    └── src/
+        ├── config.ts
+        ├── assets/
+        ├── components/
+        │   ├── AppFooter.astro
+        │   ├── AppHeader.astro
+        │   ├── AppHeaderConteudoLegal.astro
+        │   ├── Card.astro
+        │   ├── FormContato.astro
+        │   └── Modal.astro
+        ├── layouts/
+        │   └── Layout.astro
+        ├── pages/
+        │   ├── index.astro
+        │   ├── politica-de-privacidade.astro
+        │   └── termos-de-uso.astro
+        └── styles/
+            └── global.css
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🧞 Comandos
 
-## 🧞 Commands
+Todos os comando são executados a partir da raíz do projet, através de um terminal:
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
+| Comando                   | Ação                                             |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm install`             | Instala as dependências                          |
+| `npm run dev`             | Inicia o servidor local em `localhost:4321`      |
+| `npm run build`           | Builda o site para produção em `./dist/`         |
+| `npm run preview`         | Preview local do site, antes da publicação       |
 
-## 👀 Want to learn more?
+Para mais comando, consulta a documentação do Astro Build.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Integrações
+
+Os formulários de e-mail são conectados a um serviço chamado [EmailJS](https://www.emailjs.com/) para que seja possível o envio de e-mails sem a necessidade de uma linguagem backend. Há um limite mensal de 200 e-mails para o plano gratuito. 
